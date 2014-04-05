@@ -1,20 +1,12 @@
-# Echo() exercise
+# Blink exercise
 
-Modify [echo.js](echo.js) to print out each argument to the `echo()` function on a new line.
+Write a [jQuery plugin](http://docs.jquery.com/Plugins/Authoring) that makes an element act like a `<blink>` tag.  It should work for any arbitrary speed.
 
 ```javascript
-echo();
-// should print nothing
-
-echo('bla');
-// should print
-//
-// 'bla'
-
-echo('foo', 'bar', 'baz');
-// should print
-//
-// 'foo'
-// 'bar'
-// 'baz'
+// show/hide every 1000ms
+jQuery('.myDiv').blink(1000);
+// twice as fast
+jQuery('.otherDiv').blink(500);
 ```
+
+![blink demo](blink.gif)
