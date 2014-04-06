@@ -13,8 +13,8 @@
   },
   "homepage": "https://github.com/advanced-js/blink",
   "devDependencies": {
-    "grunt": "^0.4.4",
-    "grunt-contrib-jshint": "^0.10.0",
-    "grunt-html-validation": "^0.1.15"
+    "grunt": "~0.4.4",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-html-validation": "~0.1.15"
   }
 }
