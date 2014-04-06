@@ -7,10 +7,12 @@
     <div class="myDiv">
       I'm a <code>blink</code> tag!
     </div>
-    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="blink.js"></script>
     <script>
-      jQuery('.myDiv').blink(1000);
+      jQuery(document).ready(function() {
+        $('.myDiv').blink(1000);
+      });
     </script>
   </body>
 </html>
