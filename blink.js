@@ -2,7 +2,6 @@
  
     $.fn.blink = function( speed ) {
 
-        // Make the element blink
         function toggleVisibility( element ) {
             function isVisible( element ) {
                 return element.css( "visibility" ) === "visible";
