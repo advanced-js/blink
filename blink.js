@@ -16,7 +16,7 @@
 
         window.setInterval( toggleVisibility( this ), speed);
 
-        return this // Enable chaining
+        return this; // Enable chaining
  
     };
  
