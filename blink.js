@@ -1,4 +1,4 @@
-;(function ( $, window, undefined ) {
+;(function( $, window, undefined ) {
  
     $.fn.blink = function( speed ) {
 
@@ -9,7 +9,7 @@
             // A function which takes as its argument a jQuery-wrapped element
             // and returns a function which toggles that element's visibility
 
-            function toggleVisibility ( index, visibility ) {
+            function toggleVisibility( index, visibility ) {
                 return ( visibility === "visible" ) ? "hidden" : "visible";
             }
 
