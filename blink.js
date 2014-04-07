@@ -1,4 +1,4 @@
-(function ( $ ) {
+;(function ( $, window, undefined ) {
  
     $.fn.blink = function( speed ) {
 
@@ -13,7 +13,7 @@
                 return ( visibility === "visible" ) ? "hidden" : "visible";
             }
 
-            return function () {
+            return function() {
                 element.css( "visibility", toggleVisibility );
             };
         }
@@ -24,4 +24,4 @@
  
     };
  
-}( jQuery ));
+}( jQuery, window ));
