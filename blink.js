@@ -2,6 +2,8 @@
  
     $.fn.blink = function( speed ) {
 
+        speed = (typeof speed === "number" && speed > 0) ? speed : 500;
+
         function toggleVisibility( element ) {
             function isVisible( element ) {
                 return element.css( "visibility" ) === "visible";

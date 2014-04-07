@@ -13,6 +13,9 @@
     <div class="otherOtherDiv">
       I'm a slow, green <code>blink</code> tag!
     </div>
+    <div class="defaultDiv">
+      I'm a default <code>blink</code> tag!
+    </div>
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="blink.js"></script>
     <script>
@@ -20,6 +23,7 @@
         $('.myDiv').blink(1000);
         $('.otherDiv').blink(500);
         $('.otherOtherDiv').blink(2000).css("color", "green");
+        $('.defaultDiv').blink();
       });
     </script>
   </body>
