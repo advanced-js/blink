@@ -3,14 +3,19 @@
 <html>
   <head>
     <title>Blink() exercise</title>
+    <script src="jquery-2.1.0.min.js"></script>
     <script src="blink.js"></script>
   </head>
   <body>
     <div class="myDiv">
       I'm a <code>blink</code> tag!
     </div>
+    <div class="otherDiv">
+      I'm a <code>blink</code> tag that blinks faster!
+    </div>
     <script>
-      jQuery('.myDiv').blink(1000);
+      jQuery('.myDiv').blink('1000');
+      jQuery('.otherDiv').blink('500');
     </script>
   </body>
 </html>
