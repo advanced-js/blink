@@ -19,8 +19,11 @@
             var blinker = {},
                 blinkID;
 
-            function toggleVisibility( index, visibility ) {
+            function toggleVisibilityProperty( index, visibility ) {
                 return ( visibility === "visible" ) ? "hidden" : "visible";
+            }
+            function toggleElementVisibility() {
+                element.css( "visibility", toggleVisibilityProperty );
             }
 
             // Define required methods
@@ -28,9 +31,7 @@
                 return ( blinkID !== undefined );
             };
             blinker.start = function( speed ) {
-                blinkID = window.setInterval( function() {
-                    element.css( "visibility", toggleVisibility );
-                }, speed );
+                blinkID = window.setInterval( toggleElementVisibility, speed );
             };
             blinker.stop = function() {
                 window.clearInterval( blinkID );
