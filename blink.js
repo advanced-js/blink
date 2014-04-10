@@ -2,23 +2,44 @@
  
     $.fn.blink = function( speed ) {
 
-        var blinker; // Get element's blinker or intialize a new blinker
+        var blinker = this.data( "blinker" ) || initializeBlinker( this );
 
         function isValid( speed ) {
-            // Logic to see if the argument passed is a valid speed
+            return ( typeof speed === "number" && speed >= 0 );
         }
 
         function initializeBlinker( element ) {
-            // Do stuff to create a blinker and attach it to the element
-            // Return the blinker
+
+            var blinker = {},
+                blinkID;
+
+            function toggleVisibility( index, visibility ) {
+                return ( visibility === "visible" ) ? "hidden" : "visible";
+            }
+            function visibilityToggler() {
+                element.css( "visibility", toggleVisibility );
+            }
+
+            // Define required methods
+            blinker.start = function( speed ) {
+                blinkID = window.setInterval( visibilityToggler, speed );
+            };
+            blinker.stop = function() {
+                window.clearInterval( blinkID );
+            };
+
+            // Attach the blinker object to the element which called blink
+            element.data( "blinker", blinker );
+
+            return blinker;
         }
  
         if ( isValid( speed ) ) {
 
-            // blinker.stop();
+            blinker.stop();
 
             if ( speed > 0 ) {
-                // blinker.start( speed );
+                blinker.start( speed );
             }
         }
 
