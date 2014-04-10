@@ -2,23 +2,25 @@
  
     $.fn.blink = function( speed ) {
 
-        // Set a default speed incase the argument passed is not valid
-        speed = ( typeof speed === "number" && speed > 0 ) ? speed : 500;
+        var blinker; // Get element's blinker or intialize a new blinker
 
-        function visibilityToggler( element ) {
-            // A function which takes as its argument a jQuery-wrapped element
-            // and returns a function which toggles that element's visibility
-
-            function toggleVisibility( index, visibility ) {
-                return ( visibility === "visible" ) ? "hidden" : "visible";
-            }
-
-            return function() {
-                element.css( "visibility", toggleVisibility );
-            };
+        function isValid( speed ) {
+            // Logic to see if the argument passed is a valid speed
         }
 
-        window.setInterval( visibilityToggler( this ), speed );
+        function initializeBlinker( element ) {
+            // Do stuff to create a blinker and attach it to the element
+            // Return the blinker
+        }
+ 
+        if ( isValid( speed ) ) {
+
+            // blinker.stop();
+
+            if ( speed > 0 ) {
+                // blinker.start( speed );
+            }
+        }
 
         return this; // Enable chaining
  
