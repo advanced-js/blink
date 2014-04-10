@@ -24,6 +24,9 @@
             }
 
             // Define required methods
+            blinker.isBlinking = function() {
+                return ( blinkID !== undefined );
+            };
             blinker.start = function( speed ) {
                 blinkID = window.setInterval( function() {
                     element.css( "visibility", toggleVisibility );
@@ -41,11 +44,12 @@
             return blinker;
         }
  
-        // This the essence of what blink is doing, the main point
+        // This is the main point
         if ( isValid( speed ) ) {
 
-            blinker.stop();
-
+            if ( blinker.isBlinking() ) {
+                blinker.stop();
+            }
             if ( speed > 0 ) {
                 blinker.start( speed );
             }
