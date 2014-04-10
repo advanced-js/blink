@@ -26,7 +26,7 @@
             // Define required methods
             blinker.start = function( speed ) {
                 blinkID = window.setInterval( function() {
-                    element.css( "visibility", toggleVisibility )
+                    element.css( "visibility", toggleVisibility );
                 }, speed );
             };
             blinker.stop = function() {
