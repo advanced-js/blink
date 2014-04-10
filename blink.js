@@ -1,6 +1,9 @@
 ;(function( $, window, undefined ) {
  
     $.fn.blink = function( speed ) {
+        // Make the element calling this function blink at the speed requested.
+        // If the speed is 0, stop blinking.
+        // If the speed is not a positive number, do nothing.
 
         var blinker = this.data( "blinker" ) || initializeBlinker( this );
 
@@ -9,6 +12,9 @@
         }
 
         function initializeBlinker( element ) {
+            // Create a blink object which holds the methods and data needed
+            // to accomplish toggling the element's visibility, and attach the
+            // new object to the element for future use.
 
             var blinker = {},
                 blinkID;
@@ -16,16 +22,17 @@
             function toggleVisibility( index, visibility ) {
                 return ( visibility === "visible" ) ? "hidden" : "visible";
             }
-            function visibilityToggler() {
-                element.css( "visibility", toggleVisibility );
-            }
 
             // Define required methods
             blinker.start = function( speed ) {
-                blinkID = window.setInterval( visibilityToggler, speed );
+                blinkID = window.setInterval( function() {
+                    element.css( "visibility", toggleVisibility )
+                }, speed );
             };
             blinker.stop = function() {
                 window.clearInterval( blinkID );
+                // Don't leave the element hidden when blinking stops!
+                element.css( "visibility", "visible" );
             };
 
             // Attach the blinker object to the element which called blink
@@ -34,6 +41,7 @@
             return blinker;
         }
  
+        // This the essence of what blink is doing, the main point
         if ( isValid( speed ) ) {
 
             blinker.stop();
