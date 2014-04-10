@@ -14,10 +14,10 @@
     <div class="example03">
       <p>I&rsquo;m a slow, green <code>blink</code> tag!</p>
     </div>
-    <div class="example05">
+    <div class="example04">
       <p>I&rsquo;m blinking fast, but in 10 seconds will blink slowly.</p>
     </div>
-    <div class="example06">
+    <div class="example05">
       <p>I&rsquo;m blinking now, but in 5 seconds I will stop blinking.</p>
     </div>
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
@@ -27,8 +27,16 @@
         $( ".example01" ).blink( 1000 );
         $( ".example02" ).blink( 500 );
         $( ".example03" ).blink( 2000 ).css( "color", "green" );
-        $( ".example04" ).blink( 200 ).delay( 10000 ).blink(2000);
-        $( ".example05" ).blink( 500 ).delay( 5000 ).blink(0);
+        $( ".example04" ).blink( 200 );
+        $( ".example05" ).blink( 500 );
+
+        window.setTimeout( function() {
+          $( ".example04" ).blink( 2000 );
+        }, 10000 );
+
+        window.setTimeout( function() {
+          $( ".example05" ).blink( 0 );
+        }, 5000 );
       });
     </script>
   </body>
