@@ -12,7 +12,7 @@
         }
 
         function initializeBlinker( element ) {
-            // Create a blink object which holds the methods and data needed
+            // Create a blinker object which holds the methods and data needed
             // to accomplish toggling the element's visibility, and attach the
             // new object to the element for future use.
 
