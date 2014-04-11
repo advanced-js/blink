@@ -1,16 +1,21 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html>
   <head>
     <title>Blink() exercise</title>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="blink.js"></script>
-  </head>
+      </head>
   <body>
     <div class="myDiv">
       I'm a <code>blink</code> tag!
     </div>
+    <div class="otherDiv">
+      I'm a second <code>blink</code> tag!
+    </div>
+    <!-- <a href="">die</a> -->
     <script>
       jQuery('.myDiv').blink(1000);
+      jQuery('.otherDiv').blink(500);
     </script>
   </body>
 </html>
