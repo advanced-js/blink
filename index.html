@@ -1,16 +1,17 @@
-<!DOCTYPE html>
+
 <!DOCTYPE html>
 <html>
   <head>
     <title>Blink() exercise</title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script src="blink.js"></script>
   </head>
   <body>
-    <div class="myDiv">
+    <div id="myDiv">
       I'm a <code>blink</code> tag!
     </div>
     <script>
-      jQuery('.myDiv').blink(1000);
+      jQuery('#myDiv').blink(1000);
     </script>
   </body>
 </html>
