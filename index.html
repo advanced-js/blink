@@ -1,16 +1,22 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html>
   <head>
     <title>Blink() exercise</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="blink.js"></script>
   </head>
   <body>
     <div class="myDiv">
-      I'm a <code>blink</code> tag!
+      I'm impersonating a <code>blink</code> tag!
+    </div>
+    <div class="otherDiv">
+      I'm impersonating a <code>blink</code> tag!
     </div>
     <script>
-      jQuery('.myDiv').blink(1000);
+	  	// show/hide every 1000ms
+		jQuery('.myDiv code').blink(1000);
+		// twice as fast
+		jQuery('.otherDiv code').blink(500);
     </script>
   </body>
 </html>
