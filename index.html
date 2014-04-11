@@ -5,26 +5,38 @@
     <title>Blink() exercise</title>
   </head>
   <body>
-    <div class="myDiv">
-      I'm a <code>blink</code> tag!
+    <div class="example01">
+      <p>I&rsquo;m a <code>blink</code> tag!</p>
     </div>
-    <div class="otherDiv">
-      I'm a speedier <code>blink</code> tag!
+    <div class="example02">
+      <p>I&rsquo;m a speedier <code>blink</code> tag!</p>
     </div>
-    <div class="otherOtherDiv">
-      I'm a slow, green <code>blink</code> tag!
+    <div class="example03">
+      <p>I&rsquo;m a slow, green <code>blink</code> tag!</p>
     </div>
-    <div class="defaultDiv">
-      I'm a default <code>blink</code> tag!
+    <div class="example04">
+      <p>I&rsquo;m blinking fast, but in 10 seconds will blink slowly.</p>
+    </div>
+    <div class="example05">
+      <p>I&rsquo;m blinking now, but in 5 seconds I will stop blinking.</p>
     </div>
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="blink.js"></script>
     <script>
       jQuery(document).ready(function() {
-        $('.myDiv').blink(1000);
-        $('.otherDiv').blink(500);
-        $('.otherOtherDiv').blink(2000).css("color", "green");
-        $('.defaultDiv').blink();
+        $( ".example01" ).blink( 1000 );
+        $( ".example02" ).blink( 500 );
+        $( ".example03" ).blink( 2000 ).css( "color", "green" );
+        $( ".example04" ).blink( 200 );
+        $( ".example05" ).blink( 500 );
+
+        window.setTimeout( function() {
+          $( ".example04" ).blink( 2000 );
+        }, 10000 );
+
+        window.setTimeout( function() {
+          $( ".example05" ).blink( 0 );
+        }, 5000 );
       });
     </script>
   </body>

@@ -21,3 +21,11 @@ This first version satisfies the basic requirements of the assignment. However, 
 4. Should there be a way to stop blinking? For example `element.blink("stop")` or `element.blink(0)` could cancel existing blinking.
 6. A blink effect can also be created using CSS3 animation. Is that an approach worth pursuing?
 
+## v0.2.0 notes
+
+`$( element ).blink( speed )` will:
+
+* Cancel existing blinking and not start any new blinking if the speed is `0`.
+* Cancel existing blinking and start blinking at the requested speed if the speed is a number greater than zero. 
+
+The `blink` function creates an object which holds the values and functions required for blinking and attaches that object to an element using jQuery's `data()` method. The object captures the value returned by `window.setInterval`, making it possible to stop blinking by passing that value to `window.clearInterval`.
