@@ -5,7 +5,7 @@
         // If the speed is 0, stop blinking.
         // If the speed is not a positive number, do nothing.
 
-        var blinker = this.data( "blinker" ) || initializeBlinker( this );
+        var blinker;
 
         function isValid( speed ) {
             return ( typeof speed === "number" && speed >= 0 );
@@ -47,6 +47,8 @@
  
         // This is the main point
         if ( isValid( speed ) ) {
+
+            blinker = this.data( "blinker" ) || initializeBlinker( this );
 
             if ( blinker.isBlinking() ) {
                 blinker.stop();
