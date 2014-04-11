@@ -3,14 +3,21 @@
 <html>
   <head>
     <title>Blink() exercise</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="blink.js"></script>
   </head>
   <body>
     <div class="myDiv">
-      I'm a <code>blink</code> tag!
+      I'm a <code>blink</code> tag! I blink every 500ms.
     </div>
+
+    <div class="myDiv2">
+      I'm a <code>blink</code> tag! I blink every 1000ms.
+    </div>
+    
     <script>
-      jQuery('.myDiv').blink(1000);
+      jQuery('.myDiv').blink(500);
+      jQuery('.myDiv2').blink(1000);
     </script>
   </body>
 </html>
