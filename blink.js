@@ -4,7 +4,7 @@
         var defaults = {
             delay: 500
         };
-        var options = $.extend(defaults, options);
+        var options = $.extend(defaults, options); //merge the contents of object onto jQ prototype to provide new jQ methods
 
         return this.each(function() {
             var obj = $(this);
