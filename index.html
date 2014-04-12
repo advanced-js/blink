@@ -1,16 +1,27 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html>
   <head>
     <title>Blink() exercise</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script type="text/javascript">
+      if (typeof jQuery == 'undefined')
+      {
+        document.write(unescape("%3Cscript src='jquery-1.11.0.min.js' type='text/javascript'%3E%3C/script%3E"));
+      }
+    </script>
     <script src="blink.js"></script>
+    <script>
+    $(document).ready(function() {
+        $('.blinker').blink(); // default is 500ms interval
+        $('.blinkerTwo').blink({ //this is set at 1000ms
+            delay: 1000
+        });    
+    });
+    </script>
   </head>
   <body>
-    <div class="myDiv">
-      I'm a <code>blink</code> tag!
-    </div>
-    <script>
-      jQuery('.myDiv').blink(1000);
-    </script>
+    <p class="blinker">It's just wrong to make text blink.</p> 
+    <p class="blinkerTwo">This is slower, but still annoying.</p> 
   </body>
 </html>
