@@ -11,6 +11,6 @@
             shown = shown ? false : true;
         };
         setInterval(toggleblink, time);
-        return self;
+        return el;
     };
 }(jQuery));
