@@ -1,16 +1,22 @@
 (function($){
-  $.fn.blink = function(speed){
+  $.fn.showTag = function(speed){
+    var that = this;
+    setTimeout(function(){
+      that.show();
+      that.hideTag(speed);
+    }, speed);
+  };
+
+  $.fn.hideTag = function(speed){
     var that = this;
     setTimeout(function(){
       that.hide();
+      that.showTag(speed);
     }, speed);
+  };
 
-    setInterval(function(){
-      that.show();
-      setTimeout(function(){
-        that.hide();
-      }, speed);
-    }, 2*speed);
+  $.fn.blink = function(speed){
+    this.hideTag(speed);
   };
 
 }(jQuery));
