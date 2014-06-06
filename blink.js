@@ -19,7 +19,7 @@ $.fn.blink=function(speed){
 		}
 		isVisible = !isVisible;
 	},speed);
-}
+};
 
 jQuery('.myDiv').blink(1000);
 // twice as fast
