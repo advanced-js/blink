@@ -5,7 +5,7 @@ $.fn.blink = function(time) {
 
     var i = 0;
     setInterval(function() {
-        if (i==0) {
+        if (i === 0) {
             obj.fadeOut(0);
             i = 1;
         } else {
