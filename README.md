@@ -8,7 +8,7 @@ http://learn.jquery.com/plugins/basic-plugin-creation/
 
 ## V1
 
-Get to work for selectors that correspond to a single element.
+Make plugin work for selectors that correspond to a single element.
 
 ```javascript
 // show/hide every 1000ms
@@ -19,7 +19,7 @@ jQuery('.otherDiv').blink(500);
 
 ## V2
 
-Get to work for selectors that correspond to multiple selectors.
+Make plugin work for selectors that correspond to multiple elements.
 
 ```javascript
 jQuery('div').blink(1000);
