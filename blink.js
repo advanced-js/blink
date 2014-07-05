@@ -1,12 +1,15 @@
-//Specifies the function to run after the document is loaded
-(function ($)
+/*
+Shows a blinking display forever since clearInterval function has not be implemented.
+*/
+$( document ).ready(function() // runs once the page Document Object Model (DOM) is ready for JavaScript code to execute.
 {
-	//Sets default to delay at half a second
+    //Extends jquery with the blink function
     $.fn.blink = function(options)
     {
+    	//default object with 1 property
         var defaults =
         {
-            delay: 500
+            delay: 750   	//Sets default delay to 750 milliseconds
         };
 
 		// Merges the contents of two or more objects together into the first object
@@ -16,24 +19,19 @@
         return this.each(function()
         {
             var obj = $(this);
+
+            //Executes the setInterval function with the delay of 750 milliseconds
             setInterval(function()
             {
                 if ($(obj).css("visibility") == "visible")
-                {
+                {//If display is visible, hide the display
                     $(obj).css('visibility', 'hidden');
                 }
                 else
-                {
+                {//If display is hidden, show the display
                     $(obj).css('visibility', 'visible');
                 }
             }, options.delay);
         });
     };
 }(jQuery));
-
-$(document).ready(function()
-{
-    $('.blink').blink({
-        delay: 1000
-    }); // causes a 1000ms blink interval.
-});
