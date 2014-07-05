@@ -10,7 +10,7 @@
         };
 
 		// Merges the contents of two or more objects together into the first object
-        var options = $.extend(defaults, options);
+        options = $.extend(defaults, options);
 
 		//On each return, calls an anonymous function that would set the interval to toggle between hiding the object and making it visible
         return this.each(function()
@@ -28,8 +28,8 @@
                 }
             }, options.delay);
         });
-    }
-}(jQuery))
+    };
+}(jQuery));
 
 $(document).ready(function()
 {
