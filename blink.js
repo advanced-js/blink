@@ -8,5 +8,5 @@
         }, msec);
 
         return this;
-    }
+    };
 }(jQuery));
