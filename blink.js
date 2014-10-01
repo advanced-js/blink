@@ -6,7 +6,6 @@
       if (self.blinkOn === undefined) {
         self.blinkOn = false;
       }
-      //console.log(self.blinkOn);
       setTimeout(function () {
         if (self.blinkOn === true) {
           self.css({'visibility': 'visible'});
