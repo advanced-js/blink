@@ -14,7 +14,7 @@
 
       var visible = function() {
         $(element).css('visibility', 'visible');
-      }
+      };
 
       return this;
     };
