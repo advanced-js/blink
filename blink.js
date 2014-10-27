@@ -10,7 +10,7 @@
             $elems.css("visibility", "hidden");
           } else {
             $elems.css("visibility", "visible");
-          };
+          }
 
         }, msec);
 
