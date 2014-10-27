@@ -1,10 +1,17 @@
 (function($) {
 
     $.fn.blink = function(msec) {
-        var elems = this;
+        var $elems = $(this);
         
         setInterval(function(){
-          elems.toggle();
+          var visibility = $elems.css("visibility");
+
+          if (visibility == "visible"){
+            $elems.css("visibility", "hidden");
+          } else {
+            $elems.css("visibility", "visible");
+          };
+
         }, msec);
 
         return this;
