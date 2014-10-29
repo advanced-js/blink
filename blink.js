@@ -1,4 +1,5 @@
 (function($){
+	var visible, self;
 
 	$.fn.blink = function(interval){
 	  visible = true;
@@ -7,11 +8,11 @@
         setInterval(function(){
 
           if(visible === true){
-            self.css("display", "none");
+            self.css("opacity", "0");
             visible = false;
           }
-          else if(visible === false){
-            self.css("display", "block");
+          else{
+            self.css("opacity", "1");
             visible = true;
           }
 
