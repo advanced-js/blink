@@ -15,4 +15,4 @@ $.fn.blink = function(blinkSpeed) {
 
 	setInterval(toggleVisibility, blinkSpeed);
 
-}
+};
