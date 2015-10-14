@@ -1,1 +1,4 @@
-// YOUR CODE GOES HERE
+$.fn.blink = function(duration) {
+    $(this).addClass('blink');
+};
+
