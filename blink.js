@@ -5,4 +5,4 @@ function blink(obj){
 $.fn.blink = function(interval) {
   window.setInterval(blink, interval, this);
   return this;
-}
+};
