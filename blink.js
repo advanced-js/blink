@@ -1,4 +1,6 @@
 $.fn.blink = function(duration) {
-    $(this).addClass('blink');
+    $(this).css({
+    	"animation" : "blinker " + duration/1000 + "s linear infinite"
+    });
 };
 
