@@ -4,9 +4,14 @@
 // V1
 // Make plugin work for selectors that correspond to a single element.
 
-$.fn.blink = function() {
-	setInterval(blinkit,1000,this);
-};
+(function ( $ ) {
+
+	$.fn.blink = function(duration) {
+		setInterval(blinkit,duration,this);
+		return this;
+	};
+
+}( jQuery ));
 
 function blinkit(obj) {
 	var value = obj.css('visibility') === 'visible' ? 'hidden' : 'visible';
