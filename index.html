@@ -1,20 +1,30 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Blink() exercise</title>
-    <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
-    <script src="blink.js"></script>
-  </head>
-  <body>
-    <div class="myDiv">
-      I'm a <code>blink</code> tag!
-    </div>
-    <div class="otherDiv">
-      I'm <em>also</em> a <code>blink</code> tag!
-    </div>
-    <script>
-      $('.myDiv').blink(1000);
-      // $('.otherDiv').blink(500);
+<head>
+  <title>Blink() exercise</title>
+  <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+  <script src="blink.js"></script>
+</head>
+<body>
+  <div class="myDiv">
+    I'm a <code>blink</code> tag!
+  </div>
+  <div class="otherDiv">
+    I'm <em>also</em> a <code>blink</code> tag!
+  </div>
+
+</br>
+</br>
+
+<div>I'm a generic div.</div>
+<div>I'm another generic div.</div>
+
+<script>
+
+  // $('.myDiv').blink(1000);
+  // $('.otherDiv').blink(500);
+  $('div').blink(1000);
+
     </script>
   </body>
-</html>
+  </html>
